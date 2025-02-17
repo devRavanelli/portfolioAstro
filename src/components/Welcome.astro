@@ -1,0 +1,103 @@
+<section
+	class="container-fluid d-flex justify-content-center text-center text-white bg-dark"
+	style="height: 100vh;"
+>
+	<div class="contenedor">
+		<div>
+			<img class="foto" src="./images/sammy.png" />
+		</div>
+		<div class="section-info">
+			<h3>Hola! Soy</h3>
+			<h1 class="nombre">Sammy Odeh</h1>
+			<h5>DESARROLLADOR WEB FULL-STACK</h5>
+			<p class="section-info-parrafo">
+				"Apasionado por la tecnología y el desarrollo, me especializo en
+				crear aplicaciones web intuitivas y escalables. Mi objetivo es
+				transformar ideas en soluciones digitales eficientes,
+				optimizando la experiencia del usuario a través de un código
+				limpio y bien estructurado."
+			</p>
+		</div>
+		<div class="botones">
+			<button class="btn-contacto">Contacto</button>
+		</div>
+		<div class="iconos">
+			<i class="fa-brands fa-instagram"></i>
+			<i class="fa-brands fa-linkedin"></i>
+			<i class="fa-brands fa-github"></i>
+		</div>
+	</div>
+	<!-- Redes Sociales -->
+</section>
+
+<style>
+	.contenedor {
+		margin-top: 25%;
+	}
+
+	.foto{
+		width: 300px;
+	}
+
+	.section-info {
+		margin-top: 60px;
+	}
+
+	.nombre {
+		color: #1abc9c;
+	}
+
+	.section-info * {
+		margin-top: 5px;
+	}
+
+	.section-info-parrafo {
+		display: none;
+	}
+
+	.btn-contacto {
+		background-color: #1abc9c; /* Color de fondo */
+		color: black; /* Color del texto */
+		border: none; /* Sin bordes */
+		padding: 5px 70px; /* Espaciado interno */
+		font-size: 16px; /* Tamaño de fuente */
+		font-weight: bold; /* Texto en negrita */
+		border-radius: 25px; /* Bordes redondeados */
+		cursor: pointer; /* Cursor de mano */
+		transition: all 0.3s ease-in-out; /* Transición suave */
+		text-transform: uppercase; /* Texto en mayúsculas */
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+	}
+
+	/* Efecto hover */
+	.btn-contacto:hover {
+		background-color: #16a085; /* Un tono más oscuro al pasar el mouse */
+		transform: scale(1.05); /* Efecto de agrandar ligeramente */
+	}
+
+	/* Efecto al hacer clic */
+	.btn-contacto:active {
+		transform: scale(0.98); /* Reduce un poco al hacer clic */
+	}
+
+	.iconos{
+		display: flex;
+		gap: 15px;
+		justify-content: center;
+		margin-top: 30px;
+	}
+
+	@media screen and (min-width: 988px) {
+		.contenedor {
+			display: flex;
+			margin-top: 15%;
+		}
+		.section-info {
+			width: 400px;
+		}
+
+		.section-info-parrafo {
+			display: block;
+		}
+	}
+</style>
