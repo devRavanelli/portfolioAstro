@@ -6,37 +6,60 @@
 		<div>
 			<img class="foto" src="./images/sammy.png" />
 		</div>
-		<div class="section-info">
-			<h3>Hola! Soy</h3>
-			<h1 class="nombre">Sammy Odeh</h1>
-			<h5>DESARROLLADOR WEB FULL-STACK</h5>
-			<p class="section-info-parrafo">
-				"Apasionado por la tecnología y el desarrollo, me especializo en
-				crear aplicaciones web intuitivas y escalables. Mi objetivo es
-				transformar ideas en soluciones digitales eficientes,
-				optimizando la experiencia del usuario a través de un código
-				limpio y bien estructurado."
-			</p>
-		</div>
-		<div class="botones">
-			<button class="btn-contacto">Contacto</button>
+		<div class="info-btn-container">
+			<div class="section-info">
+				<h3>Hola! Soy</h3>
+				<h1 class="nombre">Sammy Odeh</h1>
+				<h5>DESARROLLADOR WEB FULL-STACK</h5>
+				<p class="section-info-parrafo">
+					"Apasionado por la tecnología y el desarrollo, me
+					especializo en crear aplicaciones web intuitivas y
+					escalables. Mi objetivo es transformar ideas en soluciones
+					digitales eficientes, optimizando la experiencia del usuario
+					a través de un código limpio y bien estructurado."
+				</p>
+			</div>
+			<div class="botones">
+				<button class="btn-cv">Descargar CV</button>
+				<button class="btn-contacto">Contacto</button>
+			</div>
 		</div>
 		<div class="iconos">
-			<i class="fa-brands fa-instagram"></i>
-			<i class="fa-brands fa-linkedin"></i>
-			<i class="fa-brands fa-github"></i>
+			<a
+				href="https://www.instagram.com/sr.samodeh"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+			<a
+				href="https://www.linkedin.com/in/sammyodeh"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-linkedin"></i>
+			</a>
+			<a
+				href="https://www.github.com/devRavanelli"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-github"></i>
+			</a>
 		</div>
 	</div>
 	<!-- Redes Sociales -->
 </section>
 
 <style>
+	@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap");
 	.contenedor {
 		margin-top: 25%;
 	}
 
-	.foto{
-		width: 300px;
+	.foto {
+		width: 250px;
+		border-radius: 200px;
 	}
 
 	.section-info {
@@ -48,56 +71,160 @@
 	}
 
 	.section-info * {
-		margin-top: 5px;
+		margin-top: 10px;
+	}
+
+	.section-info h5 {
+		font-family: "Changa", serif;
 	}
 
 	.section-info-parrafo {
 		display: none;
 	}
 
-	.btn-contacto {
-		background-color: #1abc9c; /* Color de fondo */
-		color: black; /* Color del texto */
-		border: none; /* Sin bordes */
-		padding: 5px 70px; /* Espaciado interno */
-		font-size: 16px; /* Tamaño de fuente */
-		font-weight: bold; /* Texto en negrita */
-		border-radius: 25px; /* Bordes redondeados */
-		cursor: pointer; /* Cursor de mano */
-		transition: all 0.3s ease-in-out; /* Transición suave */
-		text-transform: uppercase; /* Texto en mayúsculas */
-		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+	.botones {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
 	}
 
-	/* Efecto hover */
-	.btn-contacto:hover {
-		background-color: #16a085; /* Un tono más oscuro al pasar el mouse */
-		transform: scale(1.05); /* Efecto de agrandar ligeramente */
+	/* Estilos generales de los botones */
+	.btn-contacto,
+	.btn-cv {
+		padding: 10px 70px; /* Tamaño uniforme */
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		text-transform: uppercase;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		margin-top: 10px;
+	}
+
+	/* Botón Contacto */
+	.btn-contacto {
+		background-color: #1abc9c;
+		color: black;
+		border: none;
+	}
+
+	/* Botón Descargar CV */
+	.btn-cv {
+		display: none;
+		color: #1abc9c;
+		background-color: transparent;
+		border: 2px solid #1abc9c;
+		width: 50%;
+	}
+
+	/* Hover Estandarizado */
+	.btn-contacto:hover,
+	.btn-cv:hover {
+		background-color: #16a085;
+		color: black;
+		transform: scale(1.05);
 	}
 
 	/* Efecto al hacer clic */
-	.btn-contacto:active {
-		transform: scale(0.98); /* Reduce un poco al hacer clic */
+	.btn-contacto:active,
+	.btn-cv:active {
+		transform: scale(0.98);
 	}
 
-	.iconos{
+	.iconos {
 		display: flex;
 		gap: 15px;
 		justify-content: center;
-		margin-top: 30px;
+		margin-top: 50px;
+		font-size: 30px;
 	}
 
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.iconos a:hover{
+		color: #1abc9c;
+	}
 	@media screen and (min-width: 988px) {
 		.contenedor {
 			display: flex;
+			flex-direction: row-reverse; /* Invierte el orden: imagen a la derecha, texto a la izquierda */
+			justify-content: center;
 			margin-top: 15%;
+			gap: 100px;
 		}
 		.section-info {
-			width: 400px;
+			text-align: justify;
 		}
 
 		.section-info-parrafo {
 			display: block;
+			text-align: justify;
+		}
+
+		.botones {
+			justify-content: start;
+		}
+
+		.btn-contacto,
+		.btn-cv {
+			width: 30%;
+			font-size: 10px;
+			padding: 5px 30px; /* Tamaño uniforme */
+		}
+
+		.btn-cv {
+			display: block;
+		}
+
+		.foto {
+			width: 320px;
+		}
+
+		.iconos {
+			position: absolute;
+			left: 20px; /* Ajusta según necesidad */
+			top: 70%;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			font-size: 30px;
+		}
+
+		.info-btn-container {
+			width: 500px;
+		}
+	}
+
+	@media screen and (min-width: 1250px) {
+		.info-btn-container {
+			width: 700px;
+		}
+
+		.btn-contacto,
+		.btn-cv {
+			font-size: 16px;
+		}
+
+		.section-info * {
+			margin-top: 20px;
+		}
+
+		.section-info h1 {
+			font-size: 50px;
+			color: white;
+		}
+
+		.foto {
+			width: 350px;
+		}
+
+		.section-info h5{
+			color: #1abc9c;
 		}
 	}
 </style>
