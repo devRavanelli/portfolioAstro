@@ -61,20 +61,26 @@
 			<h5>Aprende Más</h5>
 			<h2 class="text-black">Sobre Mí</h2>
 		</div>
-		<div>
-			<img class="foto" src="./images/sammy.png" />
-		</div>
-		<div class="sobre-mi-datos">
-			<span class="material-symbols-outlined"> military_tech </span>
-			<h6>Experiencia</h6>
-			<p>1+ años</p>
-			<p>Desarrollador full-stack</p>
-		</div>
-		<div class="sobre-mi-datos">
-			<span class="material-symbols-outlined"> school </span>
-			<h6>Educación</h6>
-			<p>Bachillerato</p>
-			<p>Desarrollo de Aplicaciones WEB</p>
+		<div class="sobre-mi-contenedor">
+			<div>
+				<img class="foto" src="./images/sammy.png" />
+			</div>
+			<div class="contenedor-sobre-mi-datos">
+				<div class="sobre-mi-datos">
+					<span class="material-symbols-outlined">
+						military_tech
+					</span>
+					<h6>Experiencia</h6>
+					<p>1+ años</p>
+					<p>Desarrollador full-stack</p>
+				</div>
+				<div class="sobre-mi-datos">
+					<span class="material-symbols-outlined"> school </span>
+					<h6>Educación</h6>
+					<p>Bachillerato</p>
+					<p>Desarrollo de Aplicaciones WEB</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -273,6 +279,22 @@
 
 		.info-btn-container {
 			width: 500px;
+		}
+
+		.sobre-mi-titulos{
+			margin-top: 20px;
+		}
+
+		.sobre-mi-contenedor {
+			display: flex;
+			gap: 20px;
+			margin-top: 10%;
+		}
+
+		.contenedor-sobre-mi-datos{
+display: flex;
+flex-direction: column;
+justify-content: center;
 		}
 	}
 
