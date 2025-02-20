@@ -188,33 +188,7 @@
 		</div>
 	</div>
 </section>
-<script>
-	function bombillaFundida() {
-  const img = document.querySelector(".foto");
-  console.log(img);
-  if (!img) {
-    console.error("La imagen con clase 'foto' no se encontró.");
-    return;
-  }
 
-  const tiempos = [100, 300, 700, 200, 500, 1000, 50, 800];
-
-  function parpadeo() {
-    img.style.filter = "brightness(0.2)";
-    setTimeout(() => {
-      img.style.filter = "brightness(1.5)";
-      let tiempoRandom = tiempos[Math.floor(Math.random() * tiempos.length)];
-      setTimeout(parpadeo, tiempoRandom);
-    }, 100);
-  }
-
-  parpadeo();
-}
-
-window.onload = function () {
-  bombillaFundida();
-};
-</script>
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap");
