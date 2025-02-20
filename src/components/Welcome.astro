@@ -131,16 +131,17 @@
 	style="height: 100vh; background: linear-gradient(to bottom, white, #e0dfdf);"
 	;
 >
-<div class="contacto-seccion">
-	<div class="contacto-titulos">
-		<h2 class="text-black">Contacta conmigo</h2>
-		<h5>Hablo  
-			<img src="./images/spain.png" alt="España" width="24px" />
-			<img src="./images/united-kingdom.png" alt="uk" width="24px" />
-		</h5>
-	</div>
-	<div class="contacto-redes">
-		<a
+	<div class="contacto-seccion">
+		<div class="contacto-titulos">
+			<h2 class="text-black">Contacta conmigo</h2>
+			<h5>
+				Hablo
+				<img src="./images/spain.png" alt="España" width="24px" />
+				<img src="./images/united-kingdom.png" alt="uk" width="24px" />
+			</h5>
+		</div>
+		<div class="contacto-redes">
+			<a
 				href="https://www.instagram.com/sr.samodeh"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -154,9 +155,34 @@
 			>
 				<i class="fa-brands fa-linkedin"></i>Conecta conmigo en Linkedin
 			</a>
+		</div>
+		<div class="contacto-mail">
+			<h5>Envíame un correo</h5>
+			<form
+				action="mailto:sam_po13@hotmail.com"
+				method="POST"
+				enctype="text/plain"
+			>
+				<div class="contacto-mail-contenedor">
+					<div class="contacto-input-contenedor">
+						<div class="flex">
+							<label for="nombre">Tu nombre:</label>
+							<input type="text" name="nombre" required />
+						</div>
+						<div class="flex">
+							<label for="correo">Tu correo:</label>
+							<input type="email" name="correo" required />
+						</div>
+					</div>
+					<div class="flex">
+						<label for="mensaje">Tu mensaje:</label>
+						<textarea name="mensaje" required></textarea>
+					</div>
+				</div>
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
 	</div>
-</div>
-
 </section>
 
 <style>
@@ -334,7 +360,7 @@
 		font-family: "Changa", serif;
 	}
 
-	.proyecto p{
+	.proyecto p {
 		color: #757272;
 	}
 
@@ -355,32 +381,78 @@
 		margin: 0 10px;
 	}
 
-	.contacto-titulos{
+	.contacto-titulos {
 		margin-top: 100px;
 	}
 
-	.contacto-titulos h2{
+	.contacto-titulos h2 {
 		font-size: 40px;
 	}
 
-	.contacto-titulos h5{
+	.contacto-titulos h5 {
 		color: #757272;
 	}
 
-	.contacto-redes{
-display: flex;
-flex-direction: column;
-margin-top: 50px;
-align-items: flex-start;
-gap: 10px;
+	.contacto-redes {
+		display: flex;
+		flex-direction: column;
+		margin-top: 50px;
+		align-items: flex-start;
+		gap: 10px;
 	}
 
-	.contacto-redes a{
+	.contacto-redes a {
 		margin-left: 10px;
 	}
-	.contacto-redes i{
+	.contacto-redes i {
 		margin-right: 10px;
 		font-size: 30px;
+	}
+
+	.contacto-mail {
+		margin-top: 50px;
+		gap: 10px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 100%;
+	}
+
+	.contacto-mail-contenedor {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.contacto-input-contenedor {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.contacto-mail input,
+	.contacto-mail textarea {
+		width: 100%;
+	}
+
+	button {
+		width: 100%;
+		margin-top: 20px;
+		color: black;
+		background-color: #1abc9c;
+		border-radius: 5px;
+		transition: all 0.3s ease-in-out;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	button:hover {
+		background-color: #16a085;
+		transform: scale(1.05);
 	}
 
 	@media screen and (min-width: 988px) {
@@ -499,6 +571,36 @@ gap: 10px;
 		}
 		.sobre-mi-contenedor {
 			gap: 70px;
+		}
+
+		.contacto-seccion {
+			width: 80%;
+		}
+		.contacto-titulos h2 {
+			font-size: 60px;
+		}
+
+		.contacto-mail {
+			margin-top: 150px;
+		}
+
+		.contacto-mail-contenedor {
+			flex-direction: row;
+			gap: 50px;
+		}
+
+		.contacto-input-contenedor {
+			display: flex;
+			flex-direction: column; /* Mantiene los inputs en columna */
+			width: 50%; /* Hace que los inputs ocupen la mitad del ancho */
+		}
+
+		textarea {
+			height: 96px;
+		}
+
+		button {
+			width: 10%;
 		}
 	}
 </style>
