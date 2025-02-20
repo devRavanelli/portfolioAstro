@@ -84,6 +84,45 @@
 		</div>
 	</div>
 </section>
+<section
+	id="proyectos"
+	class="proyectos container-fluid d-flex justify-content-center text-center"
+	style="height: 100vh"
+	;
+>
+	<div class="proyectos-seccion">
+		<div class="proyectos-titulos">
+			<h2 class="text-black">Proyectos</h2>
+		</div>
+		<div class="proyectos-contenedor">
+			<div class="proyecto">
+				<a
+					href="https://padelges-production.up.railway.app/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<h3>Padel Ges</h3>
+					<img class="proyectos-img" src="./images/padelGes.png" />
+				</a>
+				<p>
+					Aplicación para administrar club de pádel + página web para
+					socios.
+				</p>
+				<div class="proyecto-skills">
+					<img src="./images/laravel.png" />
+				</div>
+			</div>
+		</div>
+		<div class="skills">
+			<img src="./images/html-5.png" />
+			<img src="./images/css-3.png" />
+			<img src="./images/js.png" />
+			<img src="./images/php.png" />
+			<img src="./images/mysql.png" />
+			<img src="./images/java.png" />
+		</div>
+	</div>
+</section>
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap");
@@ -103,7 +142,7 @@
 	}
 
 	.foto {
-		width: 250px;
+		width: 150px;
 		border-radius: 200px;
 	}
 
@@ -211,7 +250,7 @@
 		border: 2px solid #757272;
 		border-radius: 30px;
 		margin-top: 20px;
-		padding: 0 100px;
+		padding: 0 40px;
 		color: black;
 	}
 
@@ -229,6 +268,52 @@
 
 	.sobre-mi-datos p:last-of-type {
 		margin-top: -15px;
+	}
+
+	.proyectos-seccion {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.proyectos-titulos {
+		margin-top: 100px;
+	}
+
+	.proyectos-titulos h2 {
+		font-size: 60px;
+	}
+
+	.proyectos-contenedor {
+		margin-top: 20px;
+		border: 2px solid #757272;
+		border-radius: 25px;
+		padding: 10px;
+	}
+
+	.proyectos-img {
+		width: 200px;
+	}
+
+	.proyectos-contenedor h3 {
+		margin-top: 20px;
+		font-family: "Changa", serif;
+	}
+
+	.proyecto-skills img {
+		width: 100px;
+	}
+
+	.skills {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.skills img {
+		width: 50px;
+		margin: 0 10px;
 	}
 	@media screen and (min-width: 988px) {
 		.contenedor {
@@ -281,8 +366,8 @@
 			width: 500px;
 		}
 
-		.sobre-mi-titulos{
-			margin-top: 20px;
+		.sobre-mi-titulos {
+			margin-top: 100px;
 		}
 
 		.sobre-mi-contenedor {
@@ -291,10 +376,10 @@
 			margin-top: 10%;
 		}
 
-		.contenedor-sobre-mi-datos{
-display: flex;
-flex-direction: column;
-justify-content: center;
+		.contenedor-sobre-mi-datos {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 
@@ -323,6 +408,29 @@ justify-content: center;
 
 		.section-info h5 {
 			color: #1abc9c;
+		}
+
+		.sobre-mi-datos {
+			border: 2px solid #757272;
+			border-radius: 30px;
+			margin-top: 20px;
+			padding: 0 100px;
+			color: black;
+		}
+
+		.sobre-mi-datos span {
+			font-size: 50px;
+		}
+
+		.sobre-mi-datos h6 {
+			font-size: 30px;
+		}
+
+		.sobre-mi-datos p {
+			font-size: 20px;
+		}
+		.sobre-mi-contenedor {
+			gap: 70px;
 		}
 	}
 </style>
