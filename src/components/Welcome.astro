@@ -87,7 +87,7 @@
 <section
 	id="proyectos"
 	class="proyectos container-fluid d-flex justify-content-center text-center"
-	style="height: 100vh"
+	style="height: 100vh; background: linear-gradient(to bottom, #e0dfdf, white);"
 	;
 >
 	<div class="proyectos-seccion">
@@ -124,6 +124,39 @@
 			<img src="./images/java.png" />
 		</div>
 	</div>
+</section>
+<section
+	id="contacto"
+	class="contacto container-fluid d-flex justify-content-center text-center"
+	style="height: 100vh; background: linear-gradient(to bottom, white, #e0dfdf);"
+	;
+>
+<div class="contacto-seccion">
+	<div class="contacto-titulos">
+		<h2 class="text-black">Contacta conmigo</h2>
+		<h5>Hablo  
+			<img src="./images/spain.png" alt="España" width="24px" />
+			<img src="./images/united-kingdom.png" alt="uk" width="24px" />
+		</h5>
+	</div>
+	<div class="contacto-redes">
+		<a
+				href="https://www.instagram.com/sr.samodeh"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-instagram"></i> Sígueme en Instagram
+			</a>
+			<a
+				href="https://www.linkedin.com/in/sammyodeh"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-linkedin"></i>Conecta conmigo en Linkedin
+			</a>
+	</div>
+</div>
+
 </section>
 
 <style>
@@ -296,9 +329,13 @@
 		width: 200px;
 	}
 
-	.proyectos-contenedor h3 {
+	.proyecto h3 {
 		margin-top: 20px;
 		font-family: "Changa", serif;
+	}
+
+	.proyecto p{
+		color: #757272;
 	}
 
 	.proyecto-skills img {
@@ -317,6 +354,35 @@
 		width: 50px;
 		margin: 0 10px;
 	}
+
+	.contacto-titulos{
+		margin-top: 100px;
+	}
+
+	.contacto-titulos h2{
+		font-size: 40px;
+	}
+
+	.contacto-titulos h5{
+		color: #757272;
+	}
+
+	.contacto-redes{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+align-items: flex-start;
+gap: 10px;
+	}
+
+	.contacto-redes a{
+		margin-left: 10px;
+	}
+	.contacto-redes i{
+		margin-right: 10px;
+		font-size: 30px;
+	}
+
 	@media screen and (min-width: 988px) {
 		.contenedor {
 			display: flex;
