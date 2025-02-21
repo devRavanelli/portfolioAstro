@@ -13,5 +13,8 @@
     "autoprefixer": "^10.4.20",
     "bootstrap": "^5.3.3",
     "postcss": "^8.5.2"
+  },
+  "devDependencies": {
+    "@astrojs/vercel": "^8.0.7"
   }
 }
