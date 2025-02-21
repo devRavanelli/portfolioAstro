@@ -26,8 +26,8 @@ const t = useTranslations(lang);
 				</p>
 			</div>
 			<div class="botones">
-				<button class="btn-cv">Descargar CV</button>
-				<button class="btn-contacto">Contacto</button>
+				<button class="btn-cv">{t('info.cv')}</button>
+				<button class="btn-contacto">{t('nav.contact')}</button>
 			</div>
 		</div>
 		<div class="iconos">
@@ -63,8 +63,8 @@ const t = useTranslations(lang);
 >
 	<div class="sobre-mi-seccion">
 		<div class="sobre-mi-titulos">
-			<h5>Aprende Más</h5>
-			<h2 class="text-black">Sobre Mí</h2>
+			<h5>{t('about.aprende')}</h5>
+			<h2 class="text-black">{t('about.aboutMe')}</h2>
 		</div>
 		<div class="sobre-mi-contenedor">
 			<div>
@@ -75,15 +75,15 @@ const t = useTranslations(lang);
 					<span class="material-symbols-outlined">
 						military_tech
 					</span>
-					<h6>Experiencia</h6>
-					<p>1+ años</p>
-					<p>Desarrollador full-stack</p>
+					<h6>{t('about.exp')}</h6>
+					<p>1+ {t('about.años')}</p>
+					<p>{t('info.webDev')}</p>
 				</div>
 				<div class="sobre-mi-datos">
 					<span class="material-symbols-outlined"> school </span>
-					<h6>Educación</h6>
-					<p>Bachillerato</p>
-					<p>Desarrollo de Aplicaciones WEB</p>
+					<h6>{t('about.educacion')}</h6>
+					<p>{t('about.bachiller')}</p>
+					<p>{t('about.daw')}</p>
 				</div>
 			</div>
 		</div>
@@ -97,7 +97,7 @@ const t = useTranslations(lang);
 >
 	<div class="proyectos-seccion">
 		<div class="proyectos-titulos">
-			<h2 class="text-black">Proyectos</h2>
+			<h2 class="text-black">{t('projects.proyectos')}</h2>
 		</div>
 		<div class="proyectos-contenedor">
 			<div class="proyecto">
@@ -110,15 +110,14 @@ const t = useTranslations(lang);
 					<img class="proyectos-img" src="/images/padelGes.png" />
 				</a>
 				<p>
-					Aplicación para administrar club de pádel + página web para
-					socios.
+					{t('projects.parrafo1')}
 				</p>
 				<div class="proyecto-skills">
 					<img src="/images/laravel.png" />
 				</div>
 			</div>
 		</div>
-		<h5 class="mt-5">Habilidades</h5>
+		<h5 class="mt-5">{t('projects.habilidades')}</h5>
 		<div class="skills">
 			<img src="/images/html-5.png" />
 			<img src="/images/css-3.png" />
@@ -138,9 +137,9 @@ const t = useTranslations(lang);
 >
 	<div class="contacto-seccion">
 		<div class="contacto-titulos">
-			<h2 class="text-black">Contacta conmigo</h2>
+			<h2 class="text-black">{t('contacto.contacta')}</h2>
 			<h5>
-				Hablo
+				{t('contacto.hablo')}
 				<img src="/images/spain.png" alt="España" width="24px" />
 				<img src="/images/united-kingdom.png" alt="uk" width="24px" />
 			</h5>
@@ -152,7 +151,7 @@ const t = useTranslations(lang);
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<i class="fa-brands fa-instagram"></i> Sígueme en Instagram
+				<i class="fa-brands fa-instagram"></i> {t('contacto.insta')}
 			
 			</a>
 			
@@ -161,12 +160,12 @@ const t = useTranslations(lang);
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<i class="fa-brands fa-linkedin"></i>Conecta conmigo en Linkedin
+				<i class="fa-brands fa-linkedin"></i>{t('contacto.linkedin')}
 			</a>
 		
 		</div>
 		<div class="contacto-mail">
-			<h5>Envíame un correo</h5>
+			<h5>{t('contacto.correo')}</h5>
 			<form
 				action="mailto:sam_po13@hotmail.com"
 				method="POST"
@@ -175,20 +174,20 @@ const t = useTranslations(lang);
 				<div class="contacto-mail-contenedor">
 					<div class="contacto-input-contenedor">
 						<div class="flex">
-							<label for="nombre">Tu nombre:</label>
+							<label for="nombre">{t('contacto.tuNombre')}</label>
 							<input type="text" name="nombre" required />
 						</div>
 						<div class="flex">
-							<label for="correo">Tu correo:</label>
+							<label for="correo">{t('contacto.tuCorreo')}</label>
 							<input type="email" name="correo" required />
 						</div>
 					</div>
 					<div class="flex">
-						<label for="mensaje">Tu mensaje:</label>
+						<label for="mensaje">{t('contacto.tuMensaje')}</label>
 						<textarea name="mensaje" required></textarea>
 					</div>
 				</div>
-				<button type="submit">Enviar</button>
+				<button type="submit">{t('contacto.enviar')}</button>
 			</form>
 		</div>
 	</div>
