@@ -1,6 +1,8 @@
 ---
+
 import Welcome from '../../components/Welcome.astro';
 import Layout from '../../layouts/Layout.astro';
+
 
 export function getStaticPaths() {
   return [
@@ -18,3 +20,9 @@ export function getStaticPaths() {
 <Layout>
 	<Welcome />
 </Layout>
+
+<script>
+  if (window.location.pathname === '/') {
+    window.location.replace('/es/');
+  }
+</script>
