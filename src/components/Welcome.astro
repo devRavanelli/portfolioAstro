@@ -1,3 +1,12 @@
+---
+import { getLangFromUrl, useTranslations} from '../i18n/utils';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
 <section
 	class="container-fluid d-flex justify-content-center text-center text-white bg-dark"
 	id="inicio"
@@ -5,19 +14,15 @@
 >
 	<div class="contenedor">
 		<div>
-			<img class="foto" src="./images/sammy.png" />
+			<img class="foto" src="/images/sammy.png" />
 		</div>
 		<div class="info-btn-container">
 			<div class="section-info">
-				<h3>Hola! Soy</h3>
+				<h3>{t('info.hello')}</h3>
 				<h1 class="nombre">Sammy Odeh</h1>
-				<h5>DESARROLLADOR WEB FULL-STACK</h5>
+				<h5>{t('info.webDev')}</h5>
 				<p class="section-info-parrafo">
-					"Apasionado por la tecnología y el desarrollo, me
-					especializo en crear aplicaciones web intuitivas y
-					escalables. Mi objetivo es transformar ideas en soluciones
-					digitales eficientes, optimizando la experiencia del usuario
-					a través de un código limpio y bien estructurado."
+					{t('info.parrafo')}
 				</p>
 			</div>
 			<div class="botones">
@@ -63,7 +68,7 @@
 		</div>
 		<div class="sobre-mi-contenedor">
 			<div>
-				<img class="foto" src="./images/sammy.png" />
+				<img class="foto" src="/images/sammy.png" />
 			</div>
 			<div class="contenedor-sobre-mi-datos">
 				<div class="sobre-mi-datos">
@@ -102,26 +107,26 @@
 					rel="noopener noreferrer"
 				>
 					<h3>Padel Ges</h3>
-					<img class="proyectos-img" src="./images/padelGes.png" />
+					<img class="proyectos-img" src="/images/padelGes.png" />
 				</a>
 				<p>
 					Aplicación para administrar club de pádel + página web para
 					socios.
 				</p>
 				<div class="proyecto-skills">
-					<img src="./images/laravel.png" />
+					<img src="/images/laravel.png" />
 				</div>
 			</div>
 		</div>
 		<h5 class="mt-5">Habilidades</h5>
 		<div class="skills">
-			<img src="./images/html-5.png" />
-			<img src="./images/css-3.png" />
-			<img src="./images/js.png" />
-			<img src="./images/bootstrap.png" />
-			<img src="./images/php.png" />
-			<img src="./images/mysql.png" />
-			<img src="./images/java.png" />
+			<img src="/images/html-5.png" />
+			<img src="/images/css-3.png" />
+			<img src="/images/js.png" />
+			<img src="/images/bootstrap.png" />
+			<img src="/images/php.png" />
+			<img src="/images/mysql.png" />
+			<img src="/images/java.png" />
 		</div>
 	</div>
 </section>
@@ -136,8 +141,8 @@
 			<h2 class="text-black">Contacta conmigo</h2>
 			<h5>
 				Hablo
-				<img src="./images/spain.png" alt="España" width="24px" />
-				<img src="./images/united-kingdom.png" alt="uk" width="24px" />
+				<img src="/images/spain.png" alt="España" width="24px" />
+				<img src="/images/united-kingdom.png" alt="uk" width="24px" />
 			</h5>
 		</div>
 		<div class="contacto-redes">
