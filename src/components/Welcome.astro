@@ -1,10 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations} from '../i18n/utils';
-
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
 ---
 
 <section
@@ -18,16 +16,16 @@ const t = useTranslations(lang);
 		</div>
 		<div class="info-btn-container">
 			<div class="section-info">
-				<h3>{t('info.hello')}</h3>
+				<h3>{t("info.hello")}</h3>
 				<h1 class="nombre">Sammy Odeh</h1>
-				<h5>{t('info.webDev')}</h5>
+				<h5>{t("info.webDev")}</h5>
 				<p class="section-info-parrafo">
-					{t('info.parrafo')}
+					{t("info.parrafo")}
 				</p>
 			</div>
 			<div class="botones">
-				<button class="btn-cv">{t('info.cv')}</button>
-				<button class="btn-contacto">{t('nav.contact')}</button>
+				<button class="btn-cv">{t("info.cv")}</button>
+				<button class="btn-contacto">{t("nav.contact")}</button>
 			</div>
 		</div>
 		<div class="iconos">
@@ -63,27 +61,30 @@ const t = useTranslations(lang);
 >
 	<div class="sobre-mi-seccion">
 		<div class="sobre-mi-titulos">
-			<h5>{t('about.aprende')}</h5>
-			<h2 class="text-black">{t('about.aboutMe')}</h2>
+			<h5>{t("about.aprende")}</h5>
+			<h2 class="text-black">{t("about.aboutMe")}</h2>
 		</div>
 		<div class="sobre-mi-contenedor">
-			<div>
-				<img class="foto" src="/images/sammy.png" />
+			<div class="sobre-mi-imagen-texto">
+				<img class="foto" src="/images/sammyteclado.png" />
+				<p>
+					{t("about.parrafo")}
+				</p>
 			</div>
 			<div class="contenedor-sobre-mi-datos">
 				<div class="sobre-mi-datos">
 					<span class="material-symbols-outlined">
 						military_tech
 					</span>
-					<h6>{t('about.exp')}</h6>
-					<p>1+ {t('about.años')}</p>
-					<p>{t('info.webDev')}</p>
+					<h6>{t("about.exp")}</h6>
+					<p>1+ {t("about.años")}</p>
+					<p>{t("info.webDev")}</p>
 				</div>
 				<div class="sobre-mi-datos">
 					<span class="material-symbols-outlined"> school </span>
-					<h6>{t('about.educacion')}</h6>
-					<p>{t('about.bachiller')}</p>
-					<p>{t('about.daw')}</p>
+					<h6>{t("about.educacion")}</h6>
+					<p>{t("about.bachiller")}</p>
+					<p>{t("about.daw")}</p>
 				</div>
 			</div>
 		</div>
@@ -97,7 +98,7 @@ const t = useTranslations(lang);
 >
 	<div class="proyectos-seccion">
 		<div class="proyectos-titulos">
-			<h2 class="text-black">{t('projects.proyectos')}</h2>
+			<h2 class="text-black">{t("projects.proyectos")}</h2>
 		</div>
 		<div class="proyectos-contenedor">
 			<div class="proyecto">
@@ -110,14 +111,14 @@ const t = useTranslations(lang);
 					<img class="proyectos-img" src="/images/padelGes.png" />
 				</a>
 				<p>
-					{t('projects.parrafo1')}
+					{t("projects.parrafo1")}
 				</p>
 				<div class="proyecto-skills">
 					<img src="/images/laravel.png" />
 				</div>
 			</div>
 		</div>
-		<h5 class="mt-5">{t('projects.habilidades')}</h5>
+		<h5 class="mt-5">{t("projects.habilidades")}</h5>
 		<div class="skills">
 			<img src="/images/html-5.png" />
 			<img src="/images/css-3.png" />
@@ -137,35 +138,33 @@ const t = useTranslations(lang);
 >
 	<div class="contacto-seccion">
 		<div class="contacto-titulos">
-			<h2 class="text-black">{t('contacto.contacta')}</h2>
+			<h2 class="text-black">{t("contacto.contacta")}</h2>
 			<h5>
-				{t('contacto.hablo')}
+				{t("contacto.hablo")}
 				<img src="/images/spain.png" alt="España" width="24px" />
 				<img src="/images/united-kingdom.png" alt="uk" width="24px" />
 			</h5>
 		</div>
 		<div class="contacto-redes">
-			
 			<a
 				href="https://www.instagram.com/sr.samodeh"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<i class="fa-brands fa-instagram"></i> {t('contacto.insta')}
-			
+				<i class="fa-brands fa-instagram"></i>
+				{t("contacto.insta")}
 			</a>
-			
+
 			<a
 				href="https://www.linkedin.com/in/sammyodeh"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<i class="fa-brands fa-linkedin"></i>{t('contacto.linkedin')}
+				<i class="fa-brands fa-linkedin"></i>{t("contacto.linkedin")}
 			</a>
-		
 		</div>
 		<div class="contacto-mail">
-			<h5>{t('contacto.correo')}</h5>
+			<h5>{t("contacto.correo")}</h5>
 			<form
 				action="mailto:sam_po13@hotmail.com"
 				method="POST"
@@ -174,25 +173,24 @@ const t = useTranslations(lang);
 				<div class="contacto-mail-contenedor">
 					<div class="contacto-input-contenedor">
 						<div class="flex">
-							<label for="nombre">{t('contacto.tuNombre')}</label>
+							<label for="nombre">{t("contacto.tuNombre")}</label>
 							<input type="text" name="nombre" required />
 						</div>
 						<div class="flex">
-							<label for="correo">{t('contacto.tuCorreo')}</label>
+							<label for="correo">{t("contacto.tuCorreo")}</label>
 							<input type="email" name="correo" required />
 						</div>
 					</div>
 					<div class="flex">
-						<label for="mensaje">{t('contacto.tuMensaje')}</label>
+						<label for="mensaje">{t("contacto.tuMensaje")}</label>
 						<textarea name="mensaje" required></textarea>
 					</div>
 				</div>
-				<button type="submit">{t('contacto.enviar')}</button>
+				<button type="submit">{t("contacto.enviar")}</button>
 			</form>
 		</div>
 	</div>
 </section>
-
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap");
@@ -218,18 +216,40 @@ const t = useTranslations(lang);
 	}
 
 	@keyframes bombillaFundida {
-  0% { filter: brightness(1.5); }
-  10% { filter: brightness(0.3); }
-  20% { filter: brightness(1.2); }
-  30% { filter: brightness(0.6); }
-  40% { filter: brightness(1.8); }
-  50% { filter: brightness(0.1); }
-  60% { filter: brightness(1.5); }
-  70% { filter: brightness(0.4); }
-  80% { filter: brightness(1.7); }
-  90% { filter: brightness(0.2); }
-  100% { filter: brightness(1.5); }
-}
+		0% {
+			filter: brightness(1.5);
+		}
+		10% {
+			filter: brightness(0.3);
+		}
+		20% {
+			filter: brightness(1.2);
+		}
+		30% {
+			filter: brightness(0.6);
+		}
+		40% {
+			filter: brightness(1.8);
+		}
+		50% {
+			filter: brightness(0.1);
+		}
+		60% {
+			filter: brightness(1.5);
+		}
+		70% {
+			filter: brightness(0.4);
+		}
+		80% {
+			filter: brightness(1.7);
+		}
+		90% {
+			filter: brightness(0.2);
+		}
+		100% {
+			filter: brightness(1.5);
+		}
+	}
 
 	.section-info {
 		margin-top: 60px;
@@ -330,6 +350,20 @@ const t = useTranslations(lang);
 		font-family: "Changa", serif;
 	}
 
+	.sobre-mi-imagen-texto {
+		display: flex;
+		font-size: 12px;
+		color: #757272;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.sobre-mi-imagen-texto img {
+		width: 150px;
+	}
+
 	.sobre-mi-datos {
 		border: 2px solid #757272;
 		border-radius: 30px;
@@ -409,7 +443,7 @@ const t = useTranslations(lang);
 	}
 
 	.contacto-titulos h2 {
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 	.contacto-titulos h5 {
@@ -433,8 +467,6 @@ const t = useTranslations(lang);
 		margin-right: 10px;
 		font-size: 30px;
 	}
-
-	
 
 	.contacto-mail {
 		margin-top: 50px;
@@ -465,6 +497,7 @@ const t = useTranslations(lang);
 	.contacto-mail input,
 	.contacto-mail textarea {
 		width: 100%;
+		line-height: inherit;
 	}
 
 	button {
@@ -540,31 +573,45 @@ const t = useTranslations(lang);
 
 		.sobre-mi-contenedor {
 			display: flex;
-			gap: 20px;
-			margin-top: 10%;
+			margin-top: 20px;
+			flex-direction: column;
+		}
+
+		.sobre-mi-imagen-texto p {
+			width: 50%;
+			font-size: 18px;
+		}
+
+		.sobre-mi-imagen-texto img {
+			width: 250px;
+		}
+
+		.sobre-mi-datos {
+			width: 45%;
 		}
 
 		.contenedor-sobre-mi-datos {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: center;
+			gap: 20px;
 		}
 
-		.contacto-redes{
+		.contacto-redes {
 			margin-top: 100px;
 		}
 
 		.contacto-redes a {
-		margin-left: 10px;
-		display: flex;
-		align-items: center;
-		font-size: 30px;
-		margin-top: 20px;
-	}
-	.contacto-redes i {
-		margin-right: 10px;
-		font-size: 50px;
-	}
+			margin-left: 10px;
+			display: flex;
+			align-items: center;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		.contacto-redes i {
+			margin-right: 10px;
+			font-size: 50px;
+		}
 	}
 
 	@media screen and (min-width: 1250px) {
